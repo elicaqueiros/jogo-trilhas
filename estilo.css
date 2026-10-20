@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Chewy&display=swap');
+
+:root {
+    --azul-fofo: #2a6391;
+    --vermelho: #ff4057;
+    --vermelho-escuro: #d92542;
+    --amarelo: #ffdb58;
+    --azul: #258bea;
+    --azul-escuro: #173b68;
+    --vermelho-claro: #d74e4e;
+}
+
+/* CONFIGURAÇÃO GERAL */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 30px 15px;
+    background-color: var(--creme);
+    background-image: radial-gradient(#f3d7a5 1px, transparent 1px);
+    background-size: 15px 15px;
+    color: var(--azul-escuro);
+    font-family: 'Fredoka', sans-serif;
+}
+
+/* CARTÃO PRINCIPAL */
+main {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #fffefa;
+    border: 2px solid var(--azul-escuro);
+    box-shadow: 7px 7px 0 var(--azul-escuro);
+    overflow: hidden;
+    position: relative;
+}
+
+/* ETIQUETA */
+.marca {
+    display: inline-block;
+    padding: 7px 12px;
+    margin-bottom: 10px;
+    background-color: var(--amarelo);
+    border: 2px solid var(--azul-escuro);
+    color: var(--azul-escuro);
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* TÍTULO PRINCIPAL */
+h1 {
+    margin: 10px 0;
+    color: var(--vermelho);
+    font-family: 'Chewy', cursive;
+    font-size: clamp(42px, 7vw, 64px);
+    font-weight: normal;
+    line-height: 1.15;
+    text-shadow: 3px 3px 0 var(--amarelo);
+}
+
+/* TÍTULOS DOS CÔMODOS */
+h2 {
+    display: inline-block;
+    margin: 20px 0 12px;
+    padding: 10px 15px;
+    background-color: var(--amarelo);
+    border: 2px solid var(--azul-escuro);
+    color: var(--azul-escuro);
+    font-family: 'Fredoka', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* PARÁGRAFOS */
+p {
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.intro {
+    max-width: 550px;
+    margin: 12px auto 20px;
+    font-size: 18px;
+}
+
+/* TEXTO DE DESTAQUE */
+.destaque {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #ffe0df;
+    border: 2px dashed var(--vermelho);
+    color: var(--vermelho-escuro);
+    font-weight: 700;
+}
+
+/* IMAGEM DA CASA */
+.imagem-casa {
+    display: block;
+    width: 100%;
+    max-width: 620px;
+    height: 300px;
+    margin: 25px auto;
+    object-fit: cover;
+    object-position: center;
+    border: 3px solid var(--azul-escuro);
+    box-shadow: 7px 7px 0 var(--amarelo);
+}
+
+/* PERSONAGEM */
+.bombeirinho {
+    display: block;
+    width: 130px;
+    max-width: 45%;
+    height: auto;
+    margin: 15px auto;
+    object-fit: contain;
+}
+
+/* BOTÕES */
+a {
+    display: block;
+    position: relative;
+    width: 100%;
+    max-width: 390px;
+    margin: 17px auto;
+    padding: 14px 18px;
+    border: 2px solid var(--azul-escuro);
+    border-radius: 4px;
+    background-color: var(--vermelho);
+    box-shadow: 5px 5px 0 var(--azul-escuro);
+    color: var(--branco);
+    font-family: 'Fredoka', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    transition:
+        transform 0.18s ease,
+        box-shadow 0.18s ease,
+        background-color 0.18s ease;
+}
+
+/* CORES ALTERNADAS */
+a:nth-of-type(even) {
+    background-color: var(--azul);
+    color: var(--branco);
+}
+
+/* EFEITO AO PASSAR O MOUSE */
+a:hover {
+    transform: translate(4px, 4px);
+    box-shadow: 1px 1px 0 var(--azul-escuro);
+    background-color: var(--amarelo);
+    color: var(--azul-escuro);
+}
+
+/* EFEITO AO CLICAR */
+a:active {
+    transform: translate(5px, 5px);
+    box-shadow: none;
+}
+
+/* FOCO PELO TECLADO */
+a:focus-visible {
+    outline: 3px dashed var(--vermelho);
+    outline-offset: 5px;
+}
+
+/* MENSAGEM FINAL */
+.vitoria {
+    padding: 20px 10px;
+    background-color: #fff0ad;
+    border: 3px dashed var(--vermelho);
+    color: #16804a;
+    font-family: 'Chewy', cursive;
+    font-size: 36px;
+}
+
+/* RODAPÉ */
+.rodape {
+    margin-top: 25px;
+    color: var(--azul-escuro);
+    font-size: 17px;
+}
+
+/* CELULAR */
+@media (max-width: 550px) {
+    body {
+        padding: 12px;
+    }
+
+    main {
+        padding: 22px 15px;
+    }
+
+    h1 {
+        font-size: 43px;
+    }
+
+    h2 {
+        font-size: 21px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    .imagem-casa {
+        height: 220px;
+    }
+
+    a {
+        max-width: 100%;
+        font-size: 15px;
+    }
+}
+
+/* ACESSIBILIDADE */
+@media (prefers-reduced-motion: reduce) {
+    a {
+        transition: none;
+    }
+}
